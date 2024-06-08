@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nya Nya Subscription</title>
+    <link id="theme-style" rel="stylesheet" href="theme1.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Nya Nya Subscription Service</h1>
+        <nav>
+            <a href="#home" onclick="showPage('home')">Home</a>
+            <a href="#order" onclick="showPage('order')">Order Now</a>
+            <a href="#login" onclick="showPage('login')">Login</a>
+            <a href="#signup" onclick="showPage('signup')">Sign Up</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="page">
+            <h2>Home</h2>
+            <p>Welcome to the Nya Nya Subscription Service! Here, you can subscribe to receive regular updates and exclusive content.</p>
+        </section>
+        <section id="order" class="page" style="display:none;">
+            <h2>Order Your Subscription</h2>
+            <form id="order-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="subscription-type">Subscription Type:</label>
+                <select id="subscription-type" name="subscription-type">
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select><br>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section id="login" class="page" style="display:none;">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-message"></p>
+        </section>
+        <section id="signup" class="page" style="display:none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required><br>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="signup-message"></p>
+        </section>
+        <section id="admin" class="page" style="display:none;">
+            <h2>Admin Panel</h2>
+            <p id="user-count"></p>
+            <p id="subscription-count"></p>
+            <p id="recent-signup"></p>
+            <button onclick="logout()">Logout</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nya Nya Subscription Service</p>
+        <div>
+            <button onclick="changeTheme('theme1.css')">Theme 1</button>
+            <button onclick="changeTheme('theme2.css')">Theme 2</button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
